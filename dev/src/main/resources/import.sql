@@ -1,0 +1,1 @@
+insert into tb_client (name, date_of_birth, gender, creation_date, update_date) values ('Will Smith', 1967-12-01, 'male');
