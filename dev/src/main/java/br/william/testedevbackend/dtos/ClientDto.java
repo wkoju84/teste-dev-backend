@@ -1,7 +1,7 @@
 package br.william.testedevbackend.dtos;
 
 import br.william.testedevbackend.entities.Client;
-import br.william.testedevbackend.entities.HealthProblem;
+
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -12,7 +12,6 @@ public class ClientDto {
     private String name;
     private Date dateOfBirth;
     private String gender;
-    private HealthProblem healthProblem;
     private LocalDate creationDate;
     private LocalDate updateDate;
 
@@ -20,12 +19,11 @@ public class ClientDto {
     }
 
     public ClientDto(Long id, String name, Date dateOfBirth, String gender,
-                     HealthProblem healthProblem, LocalDate creationDate, LocalDate updateDate) {
+                     LocalDate creationDate, LocalDate updateDate) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
-        this.healthProblem = healthProblem;
         this.creationDate = creationDate;
         this.updateDate = updateDate;
     }
@@ -35,7 +33,6 @@ public class ClientDto {
         this.name = client.getName();
         this.dateOfBirth = client.getDateOfBirth();
         this.gender = client.getGender();
-        this.healthProblem = client.getHealthProblem();
         this.creationDate = client.getCreationDate();
         this.updateDate = client.getUpdateDate();
     }
@@ -70,14 +67,6 @@ public class ClientDto {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public HealthProblem getHealthProblem() {
-        return healthProblem;
-    }
-
-    public void setHealthProblem(HealthProblem healthProblem) {
-        this.healthProblem = healthProblem;
     }
 
     public LocalDate getCreationDate() {
