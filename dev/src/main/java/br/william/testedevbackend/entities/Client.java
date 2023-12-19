@@ -15,6 +15,8 @@ public class Client {
     private String name;
     private Date dateOfBirth;
     private String gender;
+
+    private HealthProblem healthProblem;
     private LocalDate creationDate;
     private LocalDate updateDate;
 
@@ -22,11 +24,12 @@ public class Client {
     }
 
     public Client(Long id, String name, Date dateOfBirth, String gender,
-                  LocalDate creationDate, LocalDate updateDate) {
+                  HealthProblem healthProblem, LocalDate creationDate, LocalDate updateDate) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
+        this.healthProblem = healthProblem;
         this.creationDate = creationDate;
         this.updateDate = updateDate;
     }
@@ -61,6 +64,14 @@ public class Client {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public HealthProblem getHealthProblem() {
+        return healthProblem;
+    }
+
+    public void setHealthProblem(HealthProblem healthProblem) {
+        this.healthProblem = healthProblem;
     }
 
     public LocalDate getCreationDate() {
